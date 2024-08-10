@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+.header-logo {
+    flex: 1;
+}
+
+.header-logo img {
+    width: 200px;
+}
+
+.header-content {
+    flex: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content h1,
+.header-content p {
+    margin: 0;
+}
+
+.header-address {
+    flex: 1;
+    text-align: right;
+    color: #fff;
+}
+
+.header-address p {
+    margin: 0;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+}
+
+.navlinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navlinks ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navlinks ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+.navlinks .dropdown {
+    position: relative;
+}
+
+.navlinks .dropdown .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.navlinks .dropdown .submenu li {
+    padding: 10px 15px;
+}
+
+.navlinks .dropdown .submenu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navlinks .dropdown:hover .submenu {
+    display: block;
+}
+
+.aboutnitte {
+    width: 90%;
+    font-size: 1.2rem;
+    color: #fff; /* Ensure text color contrasts with background */
+    text-align: justify;
+    margin: 20px auto; /* Center the section and add spacing */
+    padding: 20px; /* Add padding to avoid text touching edges */
+}
+
+.aboutnitte h2 {
+    text-align: center;
+    color: #fff; /* Ensure heading color contrasts with background */
+}
+
+.aboutnitte p {
+    margin: 0; /* Optional: Remove margin to avoid extra spacing */
+    line-height: 1.6; /* Improve readability with line-height */
+}
+
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+
+.footer h4 {
+    font-weight: 600;
+}
+
+.icons .fa {
+    color: #fff;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header-content {
+        margin: 20px;
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlinks ul li {
+        margin: 5px 0;
+    }
+
+    .aboutnitte {
+        font-size: 13px;
+    }
+}
