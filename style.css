@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    padding-top: 170px; 
 }
 
 nav {
@@ -20,6 +21,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2% 6%;
+    position: fixed;
+    width: 90%;
+    top: 0;
 }
 
 .header-logo {
