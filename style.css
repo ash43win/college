@@ -12,7 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    padding-top: 170px; 
+    padding-top: 170px;
 }
 
 nav {
@@ -23,49 +23,69 @@ nav {
     top: 0;
 }
 
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .header-logo {
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .header-logo img {
-    width: 200px;
+    width: 150px; /* Adjust size as needed */
+}
+
+.header-content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .header-content {
     text-align: center;
     color: #fff;
+    position: relative;
 }
 
-.header-content h1,
-.header-content p {
+.header-content h1 {
     margin: 0;
 }
 
-.navlinks {
-    margin-top: 20px; 
-    display: flex;
-    justify-content: center; 
+.header-content .address {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    text-align: right;
 }
 
-.navlinks ul {
+.navbar-bottom {
+    margin-top: 20px;
+}
+
+.navlinks {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
 }
 
-.navlinks ul li {
-    margin: 0 10px;
+.navlinks li {
+    margin: 0 15px;
     position: relative;
 }
 
-.navlinks ul li a {
+.navlinks a {
     color: #fff;
     text-decoration: none;
     font-size: 17px;
 }
 
-.navlinks ul li::after {
+.navlinks li::after {
     content: '';
     width: 0;
     height: 2px;
@@ -75,7 +95,7 @@ nav {
     transition: 0.5s;
 }
 
-.navlinks ul li:hover::after {
+.navlinks li:hover::after {
     width: 100%;
 }
 
@@ -113,18 +133,18 @@ nav {
     font-size: 1.2rem;
     color: #fff;
     text-align: justify;
-    margin: 40px auto; 
-    padding: 20px; 
+    margin: 40px auto;
+    padding: 20px;
 }
 
 .aboutnitte h2 {
     text-align: center;
-    color: #fff; 
+    color: #fff;
 }
 
 .aboutnitte p {
-    margin: 0; 
-    line-height: 1.6; 
+    margin: 0;
+    line-height: 1.6;
 }
 
 .footer {
@@ -146,20 +166,28 @@ nav {
 }
 
 @media(max-width: 700px) {
-    .header {
-        flex-direction: column;
-    }
-
-    .header-content {
-        margin: 20px;
-    }
-
-    .navlinks ul {
+    .navbar-top {
         flex-direction: column;
         align-items: center;
     }
 
-    .navlinks ul li {
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content .address {
+        position: static; /* Reset position for small screens */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlinks li {
         margin: 5px 0;
     }
 
@@ -167,4 +195,3 @@ nav {
         font-size: 13px;
     }
 }
-
