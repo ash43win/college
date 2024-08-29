@@ -17,9 +17,6 @@
 
 nav {
     background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 2% 6%;
     position: fixed;
     width: 90%;
@@ -35,7 +32,6 @@ nav {
 }
 
 .header-content {
-    flex: 2;
     text-align: center;
     color: #fff;
 }
@@ -45,19 +41,10 @@ nav {
     margin: 0;
 }
 
-.header-address {
-    flex: 1;
-    text-align: right;
-    color: #fff;
-}
-
-.header-address p {
-    margin: 0;
-}
-
 .navlinks {
+    margin-top: 20px; 
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .navlinks ul {
@@ -124,22 +111,21 @@ nav {
 .aboutnitte {
     width: 90%;
     font-size: 1.2rem;
-    color: #fff; /* Ensure text color contrasts with background */
+    color: #fff;
     text-align: justify;
-    margin: 20px auto; /* Center the section and add spacing */
-    padding: 20px; /* Add padding to avoid text touching edges */
+    margin: 20px auto; 
+    padding: 20px; 
 }
 
 .aboutnitte h2 {
     text-align: center;
-    color: #fff; /* Ensure heading color contrasts with background */
+    color: #fff; 
 }
 
 .aboutnitte p {
-    margin: 0; /* Optional: Remove margin to avoid extra spacing */
-    line-height: 1.6; /* Improve readability with line-height */
+    margin: 0; 
+    line-height: 1.6; 
 }
-
 
 .footer {
     width: 100%;
@@ -181,3 +167,4 @@ nav {
         font-size: 13px;
     }
 }
+
